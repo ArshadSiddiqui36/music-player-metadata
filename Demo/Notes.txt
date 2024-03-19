@@ -1,0 +1,35 @@
+JSMediaTags
+=====================================================================
+
+https://www.npmjs.com/package/jsmediatags
+https://github.com/aadsm/jsmediatags
+https://cdnjs.com/libraries/jsmediatags
+https://codesandbox.io/examples/package/jsmediatags
+
+https://cdnjs.cloudflare.com/ajax/libs/jsmediatags/3.9.5/jsmediatags.min.js
+https://cdnjs.cloudflare.com/ajax/libs/jsmediatags/3.9.5/jsmediatags.js
+
+
+=====================================================================
+Shortcuts:
+These are the supported shortcuts.
+=> title
+=> artist
+=> album
+=> year
+=> comment
+=> track
+=> genre
+=> picture
+=> lyrics
+
+Picture data:
+The picture tag contains an array buffer of all the bytes of the album artwork image as well as the content type of the image. The data can be converted and displayed as an image using:
+
+const { data, format } = result.tags.picture;
+let base64String = "";
+for (const i = 0; i < data.length; i++) {
+  base64String += String.fromCharCode(data[i]);
+}
+img.src = `data:${data.format};base64,${window.btoa(base64String)}`;
+=====================================================================
